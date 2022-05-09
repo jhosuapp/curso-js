@@ -21,6 +21,9 @@ getProducts()
         categories(dataCategoriesLast);
 
     })
+    .catch(error =>{
+        console.log(error);
+    });
 
 
 function getProducts(){
@@ -31,7 +34,7 @@ function getProduct(){
     return fetch('https://fakestoreapi.com/products/1')
 }
 function getCategories(){
-    return fetch('https://fakestoreapi.com/products/categories');
+    return fetch('https://fakestoredsapi.com/products/categories');
 }
 
 
