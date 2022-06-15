@@ -42,3 +42,29 @@ for(var recorrer in años){
         console.log(años[recorrer]);
     }
 }
+
+
+//TIPOS DE DATOS PERSONALIZADOS
+
+type numerosAndLetras = string | number;
+
+var trabajo: numerosAndLetras = 'programador';
+
+console.log(trabajo);
+
+//LET & VAR
+
+var firtsNumber: number = 12;
+var secondNumber: number = 13;
+
+if(firtsNumber > 10){
+    var firtsNumber = 99;
+    let secondNumber = 102;
+
+    console.log(firtsNumber, secondNumber);
+    if(1 < 2){
+        console.log(secondNumber);
+    }
+}
+
+console.log(firtsNumber, secondNumber);

@@ -28,3 +28,17 @@ for (var recorrer in años) {
         console.log(años[recorrer]);
     }
 }
+var trabajo = 'programador';
+console.log(trabajo);
+//LET & VAR
+var firtsNumber = 12;
+var secondNumber = 13;
+if (firtsNumber > 10) {
+    var firtsNumber = 99;
+    let secondNumber = 102;
+    console.log(firtsNumber, secondNumber);
+    if (1 < 2) {
+        console.log(secondNumber);
+    }
+}
+console.log(firtsNumber, secondNumber);
