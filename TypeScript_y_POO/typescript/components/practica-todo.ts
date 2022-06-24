@@ -1,10 +1,23 @@
 type StringAndNumber = string | number;
 
+//DECORADOR
+
+function numeroCamiseta(numero: number){
+    return function(target: Function){
+        target.prototype.numeroCamiseta = function():void{
+            console.log('el numero del jugador es ' + numero);
+        }
+    }
+}
+
+
+@numeroCamiseta(12)
 class jugadores{
     private posicion: string;
     private edad: number;
     private nombre: string;
     public goles: number;
+    public numeroCamiseta: number;
 
 
     public setGoles(goles: number){
@@ -22,6 +35,9 @@ class jugadores{
         this.goles = goles;
     }
 }
+var cristianoRonaldo = new jugadores('DE', 36, 'Cristiano Ronaldo', 899);
+cristianoRonaldo.numeroCamiseta = 12;
+console.log(cristianoRonaldo);
 
 
 class jugadoresExtendidos extends jugadores{
@@ -33,23 +49,13 @@ class jugadoresExtendidos extends jugadores{
 
 }
 
-var cristianoRonaldo = new jugadores('DE', 36, 'Cristiano Ronaldo', 899);
+
 
 
 var cristianoRonaldoBalones = new jugadoresExtendidos('DE', 36, 'Cristiano Ronaldo', 990);
 cristianoRonaldoBalones.setBalonesDeOro(14 + ' balones de oro');
 
 
-
-var goToJsonString: any = JSON.stringify(cristianoRonaldo);
-var goToJsonParse: any = JSON.parse(goToJsonString);
-
-
-console.log(goToJsonParse);
-
-goToJsonParse.forEach((data: any)=>{
-    console.log(data);
-});
 
 
 
