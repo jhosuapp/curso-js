@@ -1,0 +1,40 @@
+Por medio de las expresiones regulares podemos filtrar iformación o validar datos
+dentro de un formulario
+
+
+
+Por medio de esta herramienta web podremos crear nuestras expresiones regulares y 
+validarlas https://regexr.com/
+
+
+
+EXPRESIONES REGULARES
+
+/./ Me trae todas los caracteres, entre ellos, letras, números y valores especiales,
+el único que no trae sería los saltos de linea
+
+/\d/ Me trae todos las coincidencias que tengan digitos númericos [1 - 9]
+
+/\D/ Me trae todas las coincidencias que no tengan un digito númerico, trayendo desde
+letras hasta caractares especiales [a - z, /:,. etc..]
+
+/\w/ Me trae todas las coincidencias que tengan un caracteer de palabra entre ellos aplica
+los valores númericos y textuales
+[a - z, A - Z, 1 - 9]
+
+/\W/ Me trae todas las coincidencias que tengas un caracter especial
+
+/\s/ Trae todos los espacios y tabulaciones
+
+/\S/trae todos los caracteres menos los espacios y tabulaciones
+
+
+
+[a-zA-Z] me trae todos los caracteres que tengan letras minusculas o mayusculas
+
+^ Este símbolo en las cadenas de caracteres revierte todo lo que se esta buscando
+[^a-zA-Z] Me trae todos los caracteres que no tegan letras minusculas ni mayusculas
+
+[a-zA-Z1-9].+ expresión que permite escribir cualquier letra, número o simbolo
+
+^(https?:\/\/)?(www)?[a-zA-Z1-9.-]+\.(com|net|com\.mx)$ expresión regular para validar URLS
